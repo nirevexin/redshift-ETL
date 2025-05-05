@@ -15,7 +15,7 @@ At my company, we implemented an ETL pipeline orchestrated entirely with **AWS S
    - **Cleaning and transformation** using `pandas`
    - Depending on the use case:
      - Either exports the transformed data to **S3** in JSON format for batch loading, or  
-     - Directly inserts the data into **Redshift** using `psycopg2` for real-time or lightweight insert operations
+     - Directly inserts the data into **Redshift** using `psycopg2` for lightweight insert operations
 
 3. If staged in S3, the Lambda triggers a **Redshift `COPY` command** to load the data into a staging table.
 
