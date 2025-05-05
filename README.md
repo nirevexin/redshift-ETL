@@ -4,7 +4,7 @@ This folder contains AWS Lambda functions and Amazon Redshift stored procedures 
 
 ---
 
-## 🔁 Our ETL Workflow (Step-by-Step)
+## 🔁 ETL Workflow (Step-by-Step)
 
 At my company, we implemented an ETL pipeline orchestrated entirely with **AWS Step Functions**, where each stage is handled by a purpose-built **Lambda function**. This design offers transparency, flexibility, and clear traceability of the process:
 
