@@ -55,7 +55,7 @@ This ETL pipeline leverages a set of AWS services that together form a modular, 
 
 | Service              | Purpose                                                                 |
 |----------------------|-------------------------------------------------------------------------|
-| **Amazon S3**         | Temporary staging for transformed data before Redshift COPY operations |
+| **Amazon S3**         | Receives Salesforce object backups and serves as staging for transformed data  |
 | **AWS Lambda**        | Stateless functions for extraction, transformation, and Redshift loading |
 | **Amazon Redshift**   | Data warehouse with SCD Type 1 logic applied via stored procedures     |
 | **AWS Step Functions**| Orchestrates and sequences Lambda executions per object and workflow   |
