@@ -49,6 +49,19 @@ We **intentionally chose Lambda** over Glue for the following reasons:
   Orchestrate complex workflows, chaining together Lambda executions and error handling logic per object and source.
 
 ---
+## 📦 Technologies Used in the ETL Pipeline
+
+This ETL pipeline leverages a set of AWS services that together form a modular, cost-efficient, and event-driven data integration architecture:
+
+| Service              | Purpose                                                                 |
+|----------------------|-------------------------------------------------------------------------|
+| **Amazon S3**         | Temporary staging for transformed data before Redshift COPY operations |
+| **AWS Lambda**        | Stateless functions for extraction, transformation, and Redshift loading |
+| **Amazon Redshift**   | Data warehouse with SCD Type 1 logic applied via stored procedures     |
+| **AWS Step Functions**| Orchestrates and sequences Lambda executions per object and workflow   |
+| **Amazon DynamoDB**   | Tracks processed folders, keys, or identifiers to ensure idempotency   |
+| **Amazon EventBridge**| Schedules Step Function executions at defined intervals                |
+| **Amazon CloudWatch** | Captures logs, metrics, and operational visibility for Lambdas and flows |
 
 ## 🚀 Key Features
 
