@@ -6,7 +6,7 @@ This folder contains AWS Lambda functions and Amazon Redshift stored procedures 
 
 ## 🔁 Our ETL Workflow (Step-by-Step)
 
-At **Abogada Julia**, we implemented an ETL pipeline orchestrated entirely with **AWS Step Functions**, where each stage is handled by a purpose-built **Lambda function**. This design offers transparency, flexibility, and clear traceability of the process:
+At my company, we implemented an ETL pipeline orchestrated entirely with **AWS Step Functions**, where each stage is handled by a purpose-built **Lambda function**. This design offers transparency, flexibility, and clear traceability of the process:
 
 1. **Step Functions** orchestrate the sequence of Lambda executions for each data source or object (e.g., `task`, `matter`, `user`, etc.).
 
