@@ -74,5 +74,23 @@ Each object has its own Lambda flow, S3 intermediate staging, and Redshift proce
 
 ---
 
-Let me know if you'd like a Mermaid diagram or visual flow added for the architecture!
+## 📈 Architecture Diagram (Mermaid)
+
+```mermaid
+graph TD
+    A[EventBridge Schedule] --> B[Step Function Execution]
+
+    subgraph ETL Workflow
+        B --> C1[Lambda: Extract & Transform Data]
+        C1 --> C2{Use S3?}
+        C2 -- Yes --> D1[Upload to S3]
+        D1 --> D2[Redshift COPY into staging table]
+        C2 -- No --> E1[Insert directly into Redshift via psycopg2]
+    end
+
+    D2 --> F[Call Redshift Stored Procedure]
+    E1 --> F
+
+    F --> G[Target Table with SCD Type 1 logic]
+
 
