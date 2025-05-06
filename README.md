@@ -11,7 +11,7 @@ At my company, we implemented an ETL pipeline orchestrated entirely with **AWS S
 1. **Step Functions**, **triggered by EventBridge**, orchestrate the sequence of Lambda executions for each data source or object (e.g., `task`, `matter`, `user`, etc.).
 
 2. Each **Lambda** performs:
-   - Extraction from systems like **S3, APIs, Firehose, Salesforce, other SQL or NoSql databases or Google Sheets**
+   - Extraction from systems like **S3, APIs, Firehose, Salesforce, other SQL or NoSQL databases or Google Sheets**
    - **Cleaning and transformation** using `pandas`
    - Depending on the use case:
      - Either exports the transformed data to **S3** in JSON format for batch loading, or  
