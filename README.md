@@ -1,6 +1,6 @@
 # 📦 ETL Automation: Lambdas + Redshift SCD Type 1
 
-This folder contains AWS Lambda functions and Amazon Redshift stored procedures used to automate a modular, low-cost, and highly maintainable ETL pipeline. The system extracts data from multiple sources (e.g., S3, Firehose, Google Sheets, Amazon Connect), transforms it, and loads it into Redshift using a **Slowly Changing Dimension (SCD) Type 1** strategy.
+This folder contains AWS Lambda functions and Amazon Redshift stored procedures used to automate a modular, low-cost, and highly maintainable ETL pipeline. The system extracts data from multiple sources (S3, Salesforce, Firehose, Google Sheets, Amazon Connect), transforms it, and loads it into Redshift using a **Slowly Changing Dimension (SCD) Type 1** strategy.
 
 ---
 
